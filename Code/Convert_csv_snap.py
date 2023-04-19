@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Apr 18 18:40:48 2023
-
 @author: 7sing
 """
 
@@ -10,7 +8,7 @@ import numpy as np
 import glob as glob
 import matplotlib.pyplot as plt
 
-path = 'D:/Dr_Le/DNN_Results_200snap_2D' ## path to the folder where the files are##
+path = 'D:/Folder/...' ## path to the folder where the files are##
 
 csv_files = glob.glob(path + '/*.csv')
 
@@ -63,4 +61,4 @@ Y_axis = range(0,384)
 [X_plot,Y_plot] = np.meshgrid(X_axis,Y_axis)
 
 fig, ax = plt.subplots(1,1)    
-ax.contour(X_plot,Y_plot,X[180,:,:,0])
+ax.contour(X_plot,Y_plot,X[180,:,:,0]) ## use a random number for accessing snapshot as the first index of X ##
